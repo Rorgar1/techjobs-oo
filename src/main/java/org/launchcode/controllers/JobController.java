@@ -23,7 +23,8 @@ public class JobController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(Model model, int id) {
 
-        // TODO #1 - get the Job with the given ID and pass it into the view
+        // TODO #1 - get the Job with the given ID and pass it into the view : CHECK
+        model.addAttribute("job", jobData.findById(id));
 
         return "job-detail";
     }
